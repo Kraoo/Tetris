@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const h = 20;
   let cells = [];
   let score = 0;
-  let speed = 1000; // Initial speed in milliseconds
-  let level = 1; // Initial level
+  let speed = 1000;
+  let level = 1; 
 
   for (let i = 0; i < w * h; i++) {
     const cell = document.createElement('div');
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     increaseSpeed() {
       if (this.score >= level * 50) {
         level++;
-        speed = Math.max(100, speed - 100); // Decrease interval time, minimum 100ms
+        speed = Math.max(100, speed - 100);
         this.startTimer();
       }
     }
